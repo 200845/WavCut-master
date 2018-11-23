@@ -2,7 +2,7 @@
 
 import wave
 import numpy as np
-import pylab as plt
+import os
 
 CutTimeDef = 58000
 CutFrameNum =0
@@ -38,6 +38,11 @@ def CutFile():
     StepNum = int(CutFrameNum);
     StepTotalNum = 0;
     haha = 0
+
+    tempPath = os.path.dirname(__file__)
+    tempPath = tempPath + '/MusicResult'
+    os.mkdir(tempPath)
+
     while StepTotalNum < nframes:
         print("Stemp=%d" % (haha))
         if(haha<10):
